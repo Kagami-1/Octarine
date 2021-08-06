@@ -1,11 +1,19 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package exercises;
 
 public class Harry {
-
 	private boolean cloakOn;
 
-	Harry() {
+	public void Harry() {
 		System.out.println("making Harry Potter...");
+	}
+
+	private Harry(boolean cloakOn) {
+		this.cloakOn = cloakOn;
 	}
 
 	void castSpell(String spell) {
@@ -14,11 +22,12 @@ public class Harry {
 
 	void makeInvisible(boolean invisible) {
 		this.cloakOn = invisible;
-
-		if (cloakOn)
+		if (this.cloakOn) {
 			System.out.println("Harry is invisible");
-		else
+		} else {
 			System.out.println("Harry is visible");
+		}
+
 	}
 
 	void spyOnSnape() {
@@ -26,11 +35,17 @@ public class Harry {
 	}
 
 	public static void main(String[] args) {
-		// 1. make harry potter
-		// 2. become invisible
-		// 3. spy on professor snape
-		// 4. become visible again
-		// 5. cast a “stupefy” spell
-	}
 
+		exercises.Harry HarriPuttar = new exercises.Harry(false);
+
+		HarriPuttar.Harry();
+		HarriPuttar.makeInvisible(true);
+		HarriPuttar.spyOnSnape();
+		HarriPuttar.makeInvisible(false);
+		HarriPuttar.castSpell("stupefy");
+
+
+
+
+	}
 }
